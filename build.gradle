@@ -3,13 +3,13 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.11.+'
+        classpath 'com.android.tools.build:gradle:1.2.3'
     }
 }
-apply plugin: 'android-library'
+apply plugin: 'com.android.library'
 
 dependencies {
-	compile files('libs/android-support-v4.jar')
+    compile 'com.android.support:support-v4:21.0.3'
 }
 
 android {
@@ -18,8 +18,12 @@ android {
 
     buildTypes {
         release {
-            runProguard false
+            minifyEnabled false
             proguardFile getDefaultProguardFile('proguard-android.txt')
         }
+    }
+
+    dexOptions {
+        preDexLibraries = false
     }
 }
