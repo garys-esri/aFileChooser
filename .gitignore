@@ -25,3 +25,5 @@ proguard/
 
 # Log files
 *.log
+
+aFileChooser.iml
