@@ -31,4 +31,8 @@ android {
     dexOptions {
         preDexLibraries = false
     }
+
+    lintOptions {
+        disable 'MissingTranslation'
+    }
 }
